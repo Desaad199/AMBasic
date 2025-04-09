@@ -4,14 +4,13 @@
  */
 package com.jose.BaseProyectos.Repositorios;
 
-import com.jose.BaseProyectos.Entities.Direccion;
-import java.util.ArrayList;
+import com.jose.BaseProyectos.Entities.Usuarios;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author desaa
  */
-public interface RepoDireccion extends CrudRepository<Direccion, Long> {
-   ArrayList<Direccion> findAll();
+public interface RepoUsuarios extends CrudRepository<Usuarios, Long> {
+   Usuarios findByCorreoElectronico(String correoEletronico);
 }

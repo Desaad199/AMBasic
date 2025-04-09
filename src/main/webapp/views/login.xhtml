@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:include src="layout/header.xhtml"/>
+    <ui:include src="layout/bannerOtrasVistas.xhtml"/>
+    <body>
+        <div class="container-fluid">
+            <div class="row mt-3 d-flex justify-content-center">
+                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 75%;">
+                    <span class="card-header color-fondo-banner color-letras-banner text-center">
+                        Inicia Sesión
+                    </span>
+                    <i class="card-img-top mt-2 text-center bi bi-person-square text-secondary" style="font-size: 6rem;"></i>
+                    <div class="card-body">
+                        <input class="form-control mt-3" type="text" id="usuario" name="usuario" placeholder="Escriba su usuario" maxlength="100"/>
+                        <input class="form-control mt-3" type="password" id="password" name="password" placeholder="Escriba su contraseña" maxlength="24"/>
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <button type="submit" class="mt-2 btn btn-general">Enviar</button>
+                        </div>
+                        <div class="col-md-12 d-flex mt-2 justify-content-center">
+                            <a href="registro">Registrarse</a>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </body>
+</html>

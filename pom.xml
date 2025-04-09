@@ -36,8 +36,9 @@
         <dependency>
             <groupId>org.joinfaces</groupId>
             <artifactId>primefaces-spring-boot-starter</artifactId>
-            <version>5.2.0</version>
+            <version>5.3.2</version>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -49,6 +50,12 @@
             <optional>true</optional>
         </dependency>
         
+        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>6.4.1</version>
+        </dependency>
       
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -78,10 +85,18 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        
+<!--        <dependency>
+            <groupId>org.joinfaces</groupId>
+            <artifactId>joinfaces</artifactId>
+            <version>5.3.2</version>
+            <type>jar</type>
+        </dependency>-->
+        
     </dependencies>
 
    
-    <dependencyManagement>
+    <!--    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.joinfaces</groupId>
@@ -91,7 +106,7 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+    </dependencyManagement>-->
 
     <build>
         <plugins>

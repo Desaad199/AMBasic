@@ -2,8 +2,23 @@
     background-color: #57dd00;
 }
 
+
 .color-letras-banner{
     color:white;
+}
+
+.btn-general{
+    background-color: #57dd00;
+    color: white;
+}
+
+.form-general{
+    border:2px solid #57dd00;
+}
+.btn-general:hover{
+    color: #57dd00;
+    background-color: white;
+    border: 1.5px solid #57dd00;
 }
 
 .efecto-seleccion-producto:hover{
@@ -15,4 +30,8 @@
 
 .img-tamanio{
     max-height: 17rem !important;
+}
+
+.img-login{
+    background-color: #57dd00;
 }

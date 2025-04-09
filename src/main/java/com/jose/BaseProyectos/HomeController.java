@@ -17,8 +17,13 @@ public class HomeController {
     public String displayHomePage(){
         return "/index";
     }
-    @RequestMapping("/catalogo_direcciones")
-    public String displayCatDireccinoes(){
-        return "catalogo_direcciones.xhtml";
+    @RequestMapping("/login")
+    public String displayLogin(){
+        return "/login";
+    }
+    
+    @RequestMapping("/registro")
+    public String displayFormRegistro(){
+        return "/FormRegistroBean";
     }
 }

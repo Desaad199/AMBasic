@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <!--<ui:include src="../layout/header.xhtml"/>-->
+    <!--<ui:include src="../layout/bannerOtrasVistas.xhtml"/>-->
+    <ui:include src="layout/header.xhtml"/>
+    <ui:include src="layout/bannerOtrasVistas.xhtml"/>
+    <body>
+        <div class="container-fluid">
+            <div class="row mt-3 d-flex justify-content-center">
+                <h:form id="formRegistro" class="col-md-10 mb-3 shadow p-3 mb-5 bg-body rounded" onsubmit="return cifrarInformacion(event)">
+                    <div class="container-fluid color-fondo-banner rounded p-2">
+                        <h2 style="color:white;">Formulario de registro</h2>
+                    </div>
+                    <div class="col-md-12 d-flex mt-2">
+                        <label for="inputNombre" class="input-group-text">Nombre:</label>
+                        <p:inputText class="form-control" type="text" id="inputNombre" maxlength="100" value="#{formRegistroBean.nombre}"/>
+                        <label for="inputApePat" class="ms-2 input-group-text">Apellido Paterno:</label>
+                        <p:inputText class="form-control" type="text" id="inputApePat" maxlength="50" value="#{formRegistroBean.apePat}"/>
+                        <label for="inputApeMat" class="ms-2 input-group-text">Apellido Materno:</label>
+                        <p:inputText class="form-control" type="text" id="inputApeMat" maxlength="50" value="#{formRegistroBean.apeMat}"/>
+                    </div>
+                    <div class="col-md-12 d-flex mt-2">
+                        <label for="inputCorreoElectronico" class="ms-2 input-group-text">Correo electrónico:</label>
+                        <p:inputText class="form-control" type="text" id="inputCorreoElectronico" maxlength="200" value="#{formRegistroBean.correoElectronico}"/>    
+                        <label for="inputEdad" class="ms-2 input-group-text">Edad:</label>
+                        <p:inputText class="form-control"  id="inputEdad" maxlength="2" value="#{formRegistroBean.edad}"/>    
+                        <label for="codigoPostal" class="ms-2 input-group-text">Código postal:</label>
+                        <p:inputText class="form-control" type="text" id="codigoPostal" maxlength="200" value="#{formRegistroBean.codigoPostal}"/>    
+                    </div>
+                    <div class="col-md-12 d-flex mt-2">
+                        <label for="password" class="ms-2 input-group-text">Contraseña:</label>
+                        <p:inputText class="form-control" type="password" id="password" maxlength="20" value="#{formRegistroBean.password}"/>
+                        <label for="confirmacionPassword" class="ms-2 input-group-text">confirmación contraseña:</label>
+                        <p:inputText class="form-control" type="password" id="confirmacionPassword" maxlength="20"/>
+                    </div>
+                    <div class="col-md-12 d-flex mt-2">
+                        <label for="direccion" class="ms-2 input-group-text">Dirección:</label>
+                        <p:inputText class="form-control"  id="direccion" maxlength="500" value="#{formRegistroBean.direccion}"/>
+                    </div>
+                    <div class="col-md-12 d-flex mt-2 justify-content-center">
+                        <p:commandLink class="btn btn-general" value="Enviar" actionListener="#{loginController.guardarRegistro}" ajax="false"/>
+                    </div>
+                </h:form>
+            </div>
+        </div>
+    </body>
+</html>
